@@ -16,8 +16,8 @@ src-git pkgadd https://github.com/pkgadd/owrt-feed-pkgadd.git
 
 To install all its package definitions, run:
 ```
-./scripts/feeds update owrt-feed-pkgadd
-./scripts/feeds install -a -p owrt-feed-pkgadd
+./scripts/feeds update pkgadd
+./scripts/feeds install -a -p pkgadd
 ```
 
 ## License
