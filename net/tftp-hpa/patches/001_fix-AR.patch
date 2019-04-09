@@ -1,0 +1,39 @@
+tftpd-hpa: fix AR definition
+
+Make sure that $(AR) can be safely redefined for crossbuilding, by
+moving its parameters into the actual make targets, so $(AR) can be
+properly expanded to the cross-toolchain ar implementation.
+
+Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+
+--- a/MCONFIG.in
++++ b/MCONFIG.in
+@@ -67,5 +67,5 @@ LIBOBJS	= @LIBOBJS@
+ TFTPDOBJS = @TFTPDOBJS@
+ 
+ # ar and ranlib (for making libraries)
+-AR	= ar cq
++AR	= ar
+ RANLIB	= @RANLIB@
+--- a/lib/Makefile
++++ b/lib/Makefile
+@@ -23,7 +23,7 @@ distclean: clean
+ 
+ libxtra.a: $(LIBOBJS)
+ 	-rm -f libxtra.a
+-	$(AR) libxtra.a $(LIBOBJS)
++	$(AR) cq libxtra.a $(LIBOBJS)
+ 	$(RANLIB) libxtra.a
+ 
+ 
+--- a/common/Makefile
++++ b/common/Makefile
+@@ -11,7 +11,7 @@ all: $(LIB)
+ 
+ $(LIB): $(OBJS)
+ 	-rm -f $(LIB)
+-	$(AR) $(LIB) $(OBJS)
++	$(AR) cq $(LIB) $(OBJS)
+ 	$(RANLIB) $(LIB)
+ 
+ $(OBJS): tftpsubs.h
