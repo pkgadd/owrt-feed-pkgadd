@@ -11,7 +11,7 @@ This repository is intended to be layered on-top of an OpenWrt buildroot. If you
 
 This feed needs to be added to the global [feeds.conf.default](https://github.com/openwrt/openwrt/blob/master/feeds.conf.default).
 ```
-src-git owrt-feed-pkgadd https://github.com/pkgadd/owrt-feed-pkgadd.git
+src-git pkgadd https://github.com/pkgadd/owrt-feed-pkgadd.git
 ```
 
 To install all its package definitions, run:
