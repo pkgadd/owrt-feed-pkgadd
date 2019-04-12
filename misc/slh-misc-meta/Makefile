@@ -73,7 +73,6 @@ define Package/slh-misc-8m
 
   # WLAN support
   DEPENDS+= \
-	+wpad-openssl \
 	+wpa-cli \
 	+hostapd-utils
 
