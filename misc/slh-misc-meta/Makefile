@@ -27,7 +27,7 @@ define Package/slh-misc-8m
 	+6in4
 
   # Luci (SSL from OpenSSL)
-  DEPENDS:= \
+  DEPENDS+= \
 	+luci-ssl-openssl \
 	+luci-app-uhttpd
 
