@@ -85,10 +85,6 @@ define Package/slh-misc-8m/description
   Meta package for a custom selection of default package set for 8 MB flash devices.
 endef
 
-define Package/slh-misc-8m/install
-	:
-endef
-
 define Package/slh-misc-16m
   SECTION:=misc
   CATEGORY:=misc
@@ -120,10 +116,6 @@ define Package/slh-misc-16m/description
   Meta package for a custom selection of default package set for 16 MB flash devices.
 endef
 
-define Package/slh-misc-16m/install
-	:
-endef
-
 define Package/slh-misc-luci-statistics
   SECTION:=misc
   CATEGORY:=misc
@@ -147,10 +139,6 @@ define Package/slh-misc-luci-statistics/description
   Meta package for a custom selection of Luci statistics.
 endef
 
-define Package/slh-misc-luci-statistics/install
-	:
-endef
-
 define Package/slh-misc-qos
   SECTION:=misc
   CATEGORY:=misc
@@ -163,12 +151,8 @@ define Package/slh-misc-qos
 	+sqm-scripts-extra
 endef
 
-define Package/slh-misc-luci-statistics/description
+define Package/slh-misc-qos/description
   Meta package for a custom selection of QoS support packages.
-endef
-
-define Package/slh-misc-luci-statistics/install
-	:
 endef
 
 define Package/roen-misc-meta
@@ -198,11 +182,27 @@ define Package/roen-misc-meta/description
   Meta package for a custom selection of RoEns default packages.
 endef
 
-define Package/roen-misc-meta/install
+define Build/Compile
+endef
+
+define Package/slh-misc-8m/install
 	:
 endef
 
-define Build/Compile
+define Package/slh-misc-16m/install
+	:
+endef
+
+define Package/slh-misc-luci-statistics/install
+	:
+endef
+
+define Package/slh-misc-qos/install
+	:
+endef
+
+define Package/roen-misc-meta/install
+	:
 endef
 
 $(eval $(call BuildPackage,slh-misc-8m))
