@@ -36,8 +36,7 @@ define Package/asterisk-slh
 	+asterisk15-pjsip \
 	+asterisk15-res-pjproject \
 	+asterisk15-res-rtp-asterisk \
-	+asterisk15-res-sorcery \
-	+luci-app-ltqtapi
+	+asterisk15-res-sorcery
 endef
 
 define Package/asterisk-slh/description
