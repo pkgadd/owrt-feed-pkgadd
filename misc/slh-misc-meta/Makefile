@@ -145,7 +145,7 @@ define Package/slh-misc-qos
   TITLE:=meta package installing QoS support
   PKGARCH:=all
 
-  # Luci statistics
+  # SQM
   DEPENDS:= \
 	+luci-app-sqm \
 	+sqm-scripts-extra
@@ -166,7 +166,7 @@ define Package/roen-misc-meta
 	+luci-app-wifischedule
 
   # i18n-de support for Luci
-  DEPENDS:= \
+  DEPENDS+= \
 	+luci-i18n-base-de \
 	+luci-i18n-base-en \
 	+luci-i18n-ddns-de \
