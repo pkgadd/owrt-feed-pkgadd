@@ -9,9 +9,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ath10k-firmware-kvalo
-PKG_SOURCE_DATE:=2019-03-21
-PKG_SOURCE_VERSION:=ba0358e2ecb7a511844ffd2bced4500c86c1c6a1
-PKG_MIRROR_HASH:=39f0a9b5e5d451e94870264a12aba1c9ab8f7d145b691bc4ac9800ff67018aab
+PKG_SOURCE_DATE:=2019-05-01
+PKG_SOURCE_VERSION:=732024ca7fa017d1a4e44d66820d8acea7dee431
+PKG_MIRROR_HASH:=8a23372ffaa7f40bd66786791512013e95719a8aa3e03e1fea1219feaddcaea1
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -129,7 +129,7 @@ define Package/ath10k-firmware-qca9888-kvalo/install
 		$(PKG_BUILD_DIR)/QCA9888/hw2.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA9888/hw2.0/board-2.bin
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA9888/hw2.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00024 \
+		$(PKG_BUILD_DIR)/QCA9888/hw2.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00040 \
 		$(1)/lib/firmware/ath10k/QCA9888/hw2.0/firmware-5.bin
 endef
 
@@ -156,7 +156,7 @@ define Package/ath10k-firmware-qca6174-kvalo/install
 		$(PKG_BUILD_DIR)/QCA6174/hw3.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA6174/hw3.0/
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA6174/hw3.0/4.4.1.c3/firmware-6.bin_RM.4.4.1.c3-00013-QCARMSWPZ-1 \
+		$(PKG_BUILD_DIR)/QCA6174/hw3.0/4.4.1.c3/firmware-6.bin_WLAN.RM.4.4.1.c3-00030 \
 		$(1)/lib/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin
 endef
 
