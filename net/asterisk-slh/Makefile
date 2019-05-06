@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=asterisk-slh
-PKG_SOURCE_DATE:=2019-04-11
+PKG_SOURCE_DATE:=2019-05-06
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -23,20 +23,20 @@ define Package/asterisk-slh
   TITLE:=meta package installing asterisk
   PKGARCH:=all
   DEPENDS:= \
-	+asterisk15 \
-	+asterisk15-app-verbose \
-	+asterisk15-bridge-simple \
-	+asterisk15-cdr-csv \
-	+asterisk15-chan-lantiq \
-	+asterisk15-codec-a-mu \
-	+asterisk15-codec-alaw \
-	+asterisk15-codec-g722 \
-	+asterisk15-codec-g726 \
-	+asterisk15-codec-ulaw \
-	+asterisk15-pjsip \
-	+asterisk15-res-pjproject \
-	+asterisk15-res-rtp-asterisk \
-	+asterisk15-res-sorcery
+	+asterisk16 \
+	+asterisk16-app-verbose \
+	+asterisk16-bridge-simple \
+	+asterisk16-cdr-csv \
+	+asterisk16-chan-lantiq \
+	+asterisk16-codec-a-mu \
+	+asterisk16-codec-alaw \
+	+asterisk16-codec-g722 \
+	+asterisk16-codec-g726 \
+	+asterisk16-codec-ulaw \
+	+asterisk16-pjsip \
+	+asterisk16-res-pjproject \
+	+asterisk16-res-rtp-asterisk \
+	+asterisk16-res-sorcery
 endef
 
 define Package/asterisk-slh/description
