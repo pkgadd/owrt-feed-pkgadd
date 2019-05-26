@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2019-04-11
+PKG_SOURCE_DATE:=2019-05-26
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -164,6 +164,12 @@ define Package/roen-misc-meta
   # wifischedule support for Luci
   DEPENDS:= \
 	+luci-app-wifischedule
+
+  # USB tethering support
+  DEPENDS+= \
+	+kmod-usb-net \
+	+kmod-usb-net-cdc-ether \
+	+kmod-usb-net-rndis
 
   # i18n-de support for Luci
   DEPENDS+= \
