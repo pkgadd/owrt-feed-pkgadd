@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2019-05-26
+PKG_SOURCE_DATE:=2019-05-27
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -91,8 +91,12 @@ define Package/slh-misc-16m
   TITLE:=meta package installing default package set for 16 MB flash devices
   PKGARCH:=all
 
-  # htop
+  # include slh-misc-8m
   DEPENDS:= \
+	+slh-misc-8m
+
+  # htop
+  DEPENDS+= \
 	+htop
 
   # ip-full
