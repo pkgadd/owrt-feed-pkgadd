@@ -138,6 +138,14 @@ define Package/slh-misc-luci-statistics
 	+collectd-mod-thermal \
 	+collectd-mod-uptime \
 	+collectd-mod-wireless
+
+  # only available on selected targets
+  DEPENDS+= \
+	+TARGET_x86:collectd-mod-cpufreq
+	+TARGET_x86_64:collectd-mod-cpufreq
+	+TARGET_mvebu:collectd-mod-cpufreq
+	+TARGET_ipq806x:collectd-mod-cpufreq
+	+TARGET_armvirt:collectd-mod-cpufreq
 endef
 
 define Package/slh-misc-luci-statistics/description
