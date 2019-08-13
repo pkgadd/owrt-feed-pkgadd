@@ -141,10 +141,10 @@ define Package/slh-misc-luci-statistics
 
   # only available on selected targets
   DEPENDS+= \
-	+TARGET_x86:collectd-mod-cpufreq
-	+TARGET_x86_64:collectd-mod-cpufreq
-	+TARGET_mvebu:collectd-mod-cpufreq
-	+TARGET_ipq806x:collectd-mod-cpufreq
+	+TARGET_x86:collectd-mod-cpufreq \
+	+TARGET_x86_64:collectd-mod-cpufreq \
+	+TARGET_mvebu:collectd-mod-cpufreq \
+	+TARGET_ipq806x:collectd-mod-cpufreq \
 	+TARGET_armvirt:collectd-mod-cpufreq
 endef
 
@@ -174,12 +174,12 @@ define Package/roen-misc-meta
   TITLE:=meta package installing RoEns default packages
   PKGARCH:=all
 
-  ## pull in luci-statistics
-  #DEPENDS:= \
-  #	+slh-misc-luci-statistics
+  # pull in luci-statistics
+  DEPENDS:= \
+  	+slh-misc-luci-statistics
 
   # wifischedule support for Luci
-  DEPENDS:= \
+  DEPENDS+= \
 	+luci-app-wifischedule
 
   # USB tethering support
