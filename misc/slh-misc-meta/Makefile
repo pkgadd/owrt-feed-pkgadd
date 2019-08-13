@@ -131,7 +131,6 @@ define Package/slh-misc-luci-statistics
   DEPENDS:= \
 	+luci-app-statistics \
 	+collectd-mod-conntrack \
-	+collectd-mod-cpufreq \
 	+collectd-mod-entropy \
 	+collectd-mod-ping \
 	+collectd-mod-snmp \
