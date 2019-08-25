@@ -107,18 +107,37 @@ define Package/slh-misc-16m
   # Debugging options
   DEPENDS+= \
 	+kmod-ikconfig
+endef
+
+define Package/slh-misc-16m/description
+  Meta package for a custom selection of default package set for 16 MB flash devices.
+endef
+
+define Package/slh-misc-32m
+  SECTION:=misc
+  CATEGORY:=misc
+  TITLE:=meta package installing default package set for 32 MB flash devices
+  PKGARCH:=all
+
+  # include slh-misc-16m
+  DEPENDS:= \
+	+slh-misc-16m
 
   # Adblock package with Luci support, initially disabled
   DEPENDS+= \
 	+tcpdump-mini
+
+  # diffutils
+  DEPENDS+= \
+	+diffutils
 
   # tftp-hpa
   DEPENDS+= \
 	+tftpd-hpa
 endef
 
-define Package/slh-misc-16m/description
-  Meta package for a custom selection of default package set for 16 MB flash devices.
+define Package/slh-misc-32m/description
+  Meta package for a custom selection of default package set for 32 MB flash devices.
 endef
 
 define Package/slh-misc-luci-statistics
@@ -215,6 +234,10 @@ define Package/slh-misc-16m/install
 	:
 endef
 
+define Package/slh-misc-32m/install
+	:
+endef
+
 define Package/slh-misc-luci-statistics/install
 	:
 endef
@@ -229,6 +252,7 @@ endef
 
 $(eval $(call BuildPackage,slh-misc-8m))
 $(eval $(call BuildPackage,slh-misc-16m))
+$(eval $(call BuildPackage,slh-misc-32m))
 $(eval $(call BuildPackage,slh-misc-luci-statistics))
 $(eval $(call BuildPackage,slh-misc-qos))
 $(eval $(call BuildPackage,roen-misc-meta))
