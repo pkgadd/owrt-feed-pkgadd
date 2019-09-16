@@ -51,6 +51,10 @@ endef
 define Build/Compile
 endef
 
+define Package/strongswan-slh/conffiles
+	/etc/CA/
+endef
+
 define Package/strongswan-slh/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) ./files/vpn.sh $(1)/usr/sbin/
