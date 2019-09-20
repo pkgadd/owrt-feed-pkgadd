@@ -2,14 +2,15 @@
 
 START=99
 USE_PROCD=1
+DAEMON=/usr/sbin/tftpd-hpa
 
 start_service()
 {
-	local enabled="$(uci -q get tftpd_hpa.@tftpd_hpa[0].enabled)"
+	local enabled="$(uci -q get tftpd-hpa.@tftpd-hpa[0].enabled)"
 	if [ "$enabled" -gt 0 ]; then
-		local username="$(uci -q get tftpd_hpa.@tftpd_hpa[0].username)"
-		local directory="$(uci -q get tftpd_hpa.@tftpd_hpa[0].directory)"
-		local options="$(uci -q get tftpd_hpa.@tftpd_hpa[0].options)"
+		local username="$(uci -q get tftpd-hpa.@tftpd-hpa[0].username)"
+		local directory="$(uci -q get tftpd-hpa.@tftpd-hpa[0].directory)"
+		local options="$(uci -q get tftpd-hpa.@tftpd-hpa[0].options)"
 
 		[ -n username ] || username="nobody"
 		[ -n directory ] || directory="/srv/tftp"
@@ -17,7 +18,7 @@ start_service()
 
 		procd_open_instance
 		[ -d "$directory" ] || mkdir -p "$directory"
-		procd_set_param command /usr/sbin/tftpd-hpa
+		procd_set_param command "$DAEMON"
 		procd_append_param command --listen
 		procd_append_param command --foreground
 		procd_append_param command --user $username
