@@ -127,6 +127,10 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+tcpdump-mini
 
+  # banip
+  DEPENDS+= \
+	+luci-app-banip
+
   # diffutils
   DEPENDS+= \
 	+diffutils
@@ -134,6 +138,10 @@ define Package/slh-misc-32m
   # tftp-hpa
   DEPENDS+= \
 	+tftpd-hpa
+
+  # wireguard
+  DEPENDS+= \
+	+luci-app-wireguard
 endef
 
 define Package/slh-misc-32m/description
