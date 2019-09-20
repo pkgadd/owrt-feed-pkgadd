@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=tftp-hpa
 PKG_VERSION:=5.2
-PKG_RELEASE:=2
+PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
@@ -59,9 +59,9 @@ define Package/tftpd-hpa/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tftpd/tftpd $(1)/usr/sbin/tftpd-hpa
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/tftpd_hpa.init $(1)/etc/init.d/tftpd_hpa
+	$(INSTALL_BIN) ./files/tftpd-hpa.init $(1)/etc/init.d/tftpd-hpa
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) ./files/tftpd_hpa.config $(1)/etc/config/tftpd_hpa
+	$(INSTALL_CONF) ./files/tftpd-hpa.config $(1)/etc/config/tftpd-hpa
 endef
 
 $(eval $(call BuildPackage,tftp-hpa))
