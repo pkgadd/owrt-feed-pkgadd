@@ -104,10 +104,6 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+ip-full
 
-  # iw-full
-  DEPENDS+= \
-	+iw-full
-
   # Debugging options
   DEPENDS+= \
 	+kmod-ikconfig
