@@ -139,9 +139,10 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+tftpd-hpa
 
-  # wireguard
+  # wireguard (needs qrencode)
   DEPENDS+= \
-	+luci-app-wireguard
+	+luci-app-wireguard \
+	+qrencode
 endef
 
 define Package/slh-misc-32m/description
