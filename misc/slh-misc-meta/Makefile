@@ -44,8 +44,8 @@ define Package/slh-misc-8m
 	+blockd \
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
+	+kmod-fs-exfat \
 	+kmod-fs-ext4 \
-	+kmod-fs-f2fs \
 	+kmod-fs-vfat \
 	+kmod-nls-utf8 \
 	+kmod-usb2
