@@ -135,6 +135,11 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+diffutils
 
+  # ntfs-3g
+  DEPENDS+= \
+	+ntfs-3g \
+	+ntfs-3g-utils
+
   # tftp-hpa
   DEPENDS+= \
 	+tftpd-hpa
