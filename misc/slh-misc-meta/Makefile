@@ -222,15 +222,36 @@ define Package/roen-misc-meta
 
   # i18n-de support for Luci
   DEPENDS+= \
+	+luci-i18n-adblock-de \
+	+luci-i18n-adblock-en \
+	+luci-i18n-banip-de \
+	+luci-i18n-banip-en \
 	+luci-i18n-base-de \
 	+luci-i18n-base-en \
+	+luci-i18n-bcp38-de \
+	+luci-i18n-bcp38-en \
 	+luci-i18n-ddns-de \
+	+luci-i18n-ddns-en \
 	+luci-i18n-firewall-de \
+	+luci-i18n-firewall-en \
+	+luci-i18n-mwan3-de \
+	+luci-i18n-mwan3-en \
+	+luci-i18n-nlbwmon-de \
+	+luci-i18n-nlbwmon-en \
 	+luci-i18n-opkg-de \
+	+luci-i18n-opkg-en \
 	+luci-i18n-p910nd-de \
+	+luci-i18n-p910nd-en \
 	+luci-i18n-statistics-de \
+	+luci-i18n-statistics-en \
+	+luci-i18n-uhttpd-de \
+	+luci-i18n-uhttpd-en \
 	+luci-i18n-wifischedule-de \
-	+luci-i18n-wol-de
+	+luci-i18n-wifischedule-en \
+	+luci-i18n-wireguard-de \
+	+luci-i18n-wireguard-en \
+	+luci-i18n-wol-de \
+	+luci-i18n-wol-en
 endef
 
 define Package/roen-misc-meta/description
