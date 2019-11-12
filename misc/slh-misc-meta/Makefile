@@ -42,11 +42,11 @@ define Package/slh-misc-8m
   # USB device mount & filesystem support
   DEPENDS+= \
 	+blockd \
+	+eject \
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
 	+kmod-fs-exfat \
 	+kmod-fs-ext4 \
-	+kmod-fs-vfat \
 	+kmod-nls-utf8 \
 	+kmod-usb2
 
