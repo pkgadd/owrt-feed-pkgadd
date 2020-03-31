@@ -45,7 +45,7 @@ define Package/slh-misc-8m
 	+eject \
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
-	+LINUX_5_4:kmod-fs-exfat \
+	+!LINUX_4_19:kmod-fs-exfat \
 	+LINUX_4_19:kmod-fs-exfat0 \
 	+kmod-fs-ext4 \
 	+kmod-nls-utf8 \
