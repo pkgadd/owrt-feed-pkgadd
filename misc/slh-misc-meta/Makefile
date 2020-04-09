@@ -97,6 +97,10 @@ define Package/slh-misc-16m
   DEPENDS:= \
 	+slh-misc-8m
 
+  # exfat-utils
+  DEPENDS+= \
+	exfat-fsck
+
   # htop
   DEPENDS+= \
 	+htop
@@ -135,6 +139,10 @@ define Package/slh-misc-32m
   # diffutils
   DEPENDS+= \
 	+diffutils
+
+  # exfat-utils
+  DEPENDS+= \
+	exfat-mkfs
 
   # ntfs-3g
   DEPENDS+= \
