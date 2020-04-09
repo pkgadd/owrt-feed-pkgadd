@@ -244,6 +244,8 @@ define Package/roen-misc-meta
 	+luci-i18n-opkg-en \
 	+luci-i18n-p910nd-de \
 	+luci-i18n-p910nd-en \
+	+luci-i18n-sqm-de \
+	+luci-i18n-sqm-en \
 	+luci-i18n-statistics-de \
 	+luci-i18n-statistics-en \
 	+luci-i18n-uhttpd-de \
