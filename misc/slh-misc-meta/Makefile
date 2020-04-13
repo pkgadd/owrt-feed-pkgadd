@@ -101,7 +101,7 @@ define Package/slh-misc-16m
 
   # exfat-utils
   DEPENDS+= \
-	exfat-fsck
+	+exfat-fsck
 
   # htop
   DEPENDS+= \
@@ -144,7 +144,7 @@ define Package/slh-misc-32m
 
   # exfat-utils
   DEPENDS+= \
-	exfat-mkfs
+	+exfat-mkfs
 
   # ntfs-3g
   DEPENDS+= \
