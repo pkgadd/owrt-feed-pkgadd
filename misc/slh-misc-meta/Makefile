@@ -138,10 +138,6 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+luci-app-banip
 
-  # DAWN
-  DEPENDS+= \
-	+luci-app-dawn
-
   # diffutils
   DEPENDS+= \
 	+diffutils
