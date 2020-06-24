@@ -71,6 +71,15 @@ define Package/slh-misc-8m
 	+luci-app-ddns \
 	+ddns-scripts_no-ip_com
 
+  # tftp-hpa
+  DEPENDS+= \
+	+tftpd-hpa
+
+  # wireguard (needs qrencode)
+  DEPENDS+= \
+	+luci-app-wireguard \
+	+qrencode
+
   # WoL support for Luci
   DEPENDS+= \
 	+luci-app-wol
@@ -150,15 +159,6 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+ntfs-3g \
 	+ntfs-3g-utils
-
-  # tftp-hpa
-  DEPENDS+= \
-	+tftpd-hpa
-
-  # wireguard (needs qrencode)
-  DEPENDS+= \
-	+luci-app-wireguard \
-	+qrencode
 endef
 
 define Package/slh-misc-32m/description
