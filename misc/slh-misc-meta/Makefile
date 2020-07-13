@@ -108,6 +108,10 @@ define Package/slh-misc-16m
   DEPENDS:= \
 	+slh-misc-8m
 
+  # Debugging options
+  DEPENDS+= \
+	+kmod-ikconfig
+
   # exfat-utils
   DEPENDS+= \
 	+exfat-fsck
@@ -120,9 +124,9 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+ip-full
 
-  # Debugging options
+  # umdns
   DEPENDS+= \
-	+kmod-ikconfig
+	+umdns
 endef
 
 define Package/slh-misc-16m/description
