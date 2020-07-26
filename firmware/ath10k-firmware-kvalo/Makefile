@@ -30,6 +30,12 @@ define Package/ath10k-kvalo-firmware-default
   PKGARCH:=all
 endef
 
+define Package/ath10k-firmware-qca9377-kvalo
+$(Package/ath10k-kvalo-firmware-default)
+  TITLE:=ath10k firmware for QCA9377 devices (kvalo git)
+  PROVIDES:=ath10k-firmware-qca9377
+endef
+
 define Package/ath10k-firmware-qca9887-kvalo
 $(Package/ath10k-kvalo-firmware-default)
   TITLE:=ath10k firmware for QCA9887 devices (kvalo git)
@@ -113,6 +119,16 @@ define Package/ath10k-firmware-qca4019-kvalo/install
 		$(1)/lib/firmware/ath10k/QCA4019/hw1.0/firmware-5.bin
 endef
 
+define Package/ath10k-firmware-qca9377-kvalo/install
+	$(INSTALL_DIR) $(1)/lib/firmware/ath10k/QCA9377/hw1.0
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/QCA9377/hw1.0/WLAN.TF.2.1/firmware-6.bin_WLAN.TF.2.1-00021-QCARMSWP-1 \
+		$(1)/lib/firmware/ath10k/QCA9377/hw1.0/firmware-6.bin
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/QCA9377/hw1.0/board-2.bin \
+		$(1)/lib/firmware/ath10k/QCA9377/hw1.0/
+endef
+
 define Package/ath10k-firmware-qca9887-kvalo/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath10k/QCA9887/hw1.0
 	$(INSTALL_DATA) \
@@ -183,6 +199,7 @@ define Package/ath10k-firmware-qca9984-kvalo/install
 		$(1)/lib/firmware/ath10k/QCA9984/hw1.0/firmware-5.bin
 endef
 
+$(eval $(call BuildPackage,ath10k-firmware-qca9377-kvalo))
 $(eval $(call BuildPackage,ath10k-firmware-qca9887-kvalo))
 $(eval $(call BuildPackage,ath10k-firmware-qca9888-kvalo))
 $(eval $(call BuildPackage,ath10k-firmware-qca988x-kvalo))
