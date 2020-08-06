@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2019-05-27
+PKG_SOURCE_DATE:=2020-08-06
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -47,8 +47,7 @@ define Package/slh-misc-8m
 	+eject \
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
-	+!LINUX_4_19:kmod-fs-exfat \
-	+LINUX_4_19:kmod-fs-exfat0 \
+	+kmod-fs-exfat \
 	+kmod-fs-ext4 \
 	+kmod-nls-utf8 \
 	+kmod-usb2
@@ -77,16 +76,10 @@ define Package/slh-misc-8m
 
   # wireguard (needs qrencode)
   DEPENDS+= \
-	+luci-app-wireguard \
-	+qrencode
-
-  # WoL support for Luci
-  DEPENDS+= \
-	+luci-app-wol
+	+luci-app-wireguard
 
   # WLAN support
   DEPENDS+= \
-	+wpa-cli \
 	+hostapd-utils
 
   # opkg
@@ -127,6 +120,18 @@ define Package/slh-misc-16m
   # umdns
   DEPENDS+= \
 	+umdns
+
+  # wireguard (needs qrencode)
+  DEPENDS+= \
+	+qrencode
+
+  # WLAN support
+  DEPENDS+= \
+	+wpa-cli
+
+  # WoL support for Luci
+  DEPENDS+= \
+	+luci-app-wol
 endef
 
 define Package/slh-misc-16m/description
