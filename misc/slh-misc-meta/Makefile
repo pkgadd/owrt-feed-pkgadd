@@ -198,6 +198,7 @@ define Package/slh-misc-luci-statistics
 	+TARGET_mvebu:collectd-mod-cpufreq \
 	+TARGET_ipq40xx:collectd-mod-cpufreq \
 	+TARGET_ipq806x:collectd-mod-cpufreq \
+	+TARGET_ipq807x:collectd-mod-cpufreq \
 	+TARGET_armvirt:collectd-mod-cpufreq
 endef
 
