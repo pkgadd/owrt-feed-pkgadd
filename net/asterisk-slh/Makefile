@@ -23,20 +23,20 @@ define Package/asterisk-slh
   TITLE:=meta package installing asterisk
   PKGARCH:=all
   DEPENDS:= \
-	+asterisk16 \
-	+asterisk16-app-verbose \
-	+asterisk16-bridge-simple \
-	+asterisk16-cdr-csv \
-	+asterisk16-chan-lantiq \
-	+asterisk16-codec-a-mu \
-	+asterisk16-codec-alaw \
-	+asterisk16-codec-g722 \
-	+asterisk16-codec-g726 \
-	+asterisk16-codec-ulaw \
-	+asterisk16-pjsip \
-	+asterisk16-res-pjproject \
-	+asterisk16-res-rtp-asterisk \
-	+asterisk16-res-sorcery
+	+asterisk \
+	+asterisk-app-verbose \
+	+asterisk-bridge-simple \
+	+asterisk-cdr-csv \
+	+asterisk-chan-lantiq \
+	+asterisk-codec-a-mu \
+	+asterisk-codec-alaw \
+	+asterisk-codec-g722 \
+	+asterisk-codec-g726 \
+	+asterisk-codec-ulaw \
+	+asterisk-pjsip \
+	+asterisk-res-pjproject \
+	+asterisk-res-rtp-asterisk \
+	+asterisk-res-sorcery
 endef
 
 define Package/asterisk-slh/description
