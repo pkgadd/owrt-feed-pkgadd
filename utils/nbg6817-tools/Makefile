@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/version.mk
 
 PKG_NAME:=nbg6817-tools
 PKG_SOURCE_DATE:=2019-03-28
-PKG_RELEASE:=1
+PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_SOURCE_PROTO:=git
