@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2015 OpenWrt.org
-# Copyright (C) 2018-2019 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# Copyright (C) 2018-2021 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -9,10 +9,10 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ath10k-firmware-kvalo
-PKG_SOURCE_DATE:=2020-12-23
-PKG_SOURCE_VERSION:=84b47062aab31d67156e0a3ef593a6999a12864b
-PKG_MIRROR_HASH:=2dcccc666a4acdedff789cc9f595412432a8f6104950ac1f6cade5c85aa6f22f
-PKG_RELEASE:=1
+PKG_SOURCE_DATE:=2021-02-09
+PKG_SOURCE_VERSION:=f4758689ec827b1eb01c0604a4278b47483ea42f
+PKG_MIRROR_HASH:=0c344604800531e6c99723cc656fbc19ae8df73e7b5b3e8195381cd891559706
+PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_SOURCE_PROTO:=git
@@ -145,7 +145,7 @@ define Package/ath10k-firmware-qca9888-kvalo/install
 		$(PKG_BUILD_DIR)/QCA9888/hw2.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA9888/hw2.0/board-2.bin
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA9888/hw2.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00135 \
+		$(PKG_BUILD_DIR)/QCA9888/hw2.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00139 \
 		$(1)/lib/firmware/ath10k/QCA9888/hw2.0/firmware-5.bin
 endef
 
@@ -172,7 +172,7 @@ define Package/ath10k-firmware-qca6174-kvalo/install
 		$(PKG_BUILD_DIR)/QCA6174/hw3.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA6174/hw3.0/
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA6174/hw3.0/4.4.1/firmware-6.bin_WLAN.RM.4.4.1-00157-QCARMSWPZ-1 \
+		$(PKG_BUILD_DIR)/QCA6174/hw3.0/4.4.1/firmware-6.bin_WLAN.RM.4.4.1-00241-QCARMSWPZ-1 \
 		$(1)/lib/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin
 endef
 
@@ -195,7 +195,7 @@ define Package/ath10k-firmware-qca9984-kvalo/install
 		$(PKG_BUILD_DIR)/QCA9984/hw1.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA9984/hw1.0/board-2.bin
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA9984/hw1.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00135 \
+		$(PKG_BUILD_DIR)/QCA9984/hw1.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00139 \
 		$(1)/lib/firmware/ath10k/QCA9984/hw1.0/firmware-5.bin
 endef
 
