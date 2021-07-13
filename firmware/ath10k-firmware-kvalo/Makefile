@@ -9,9 +9,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ath10k-firmware-kvalo
-PKG_SOURCE_DATE:=2021-06-08
-PKG_SOURCE_VERSION:=5a35119253a9a076845a8732ba2f183aa33a157e
-PKG_MIRROR_HASH:=e49bff735c607e9cadcf2a8a2ab6d7731b65b854aff5ce47f167a2c34fbb8ca1
+PKG_SOURCE_DATE:=2021-06-21
+PKG_SOURCE_VERSION:=91e35569a86984d64c0271d29a0be16413eb1179
+PKG_MIRROR_HASH:=e07745d99c683481de3aac2d61fc696de6786bfde4cea50fe47559e6433ad726
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -145,7 +145,7 @@ define Package/ath10k-firmware-qca9888-kvalo/install
 		$(PKG_BUILD_DIR)/QCA9888/hw2.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA9888/hw2.0/board-2.bin
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA9888/hw2.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00149 \
+		$(PKG_BUILD_DIR)/QCA9888/hw2.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00152 \
 		$(1)/lib/firmware/ath10k/QCA9888/hw2.0/firmware-5.bin
 endef
 
@@ -195,7 +195,7 @@ define Package/ath10k-firmware-qca9984-kvalo/install
 		$(PKG_BUILD_DIR)/QCA9984/hw1.0/board-2.bin \
 		$(1)/lib/firmware/ath10k/QCA9984/hw1.0/board-2.bin
 	$(INSTALL_DATA) \
-		$(PKG_BUILD_DIR)/QCA9984/hw1.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00149 \
+		$(PKG_BUILD_DIR)/QCA9984/hw1.0/3.9.0.2/firmware-5.bin_10.4-3.9.0.2-00152 \
 		$(1)/lib/firmware/ath10k/QCA9984/hw1.0/firmware-5.bin
 endef
 
