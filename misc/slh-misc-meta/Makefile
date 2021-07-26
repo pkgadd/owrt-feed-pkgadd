@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2020-10-03
+PKG_SOURCE_DATE:=2021-07-26
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -26,7 +26,7 @@ define Package/slh-misc-8m
   DEPENDS:= \
 	+6in4
 
-  # Luci (SSL from OpenSSL)
+  # Luci (SSL, default SSL provider)
   DEPENDS+= \
 	+luci-ssl-openssl \
 	+luci-app-uhttpd \
@@ -100,6 +100,10 @@ define Package/slh-misc-16m
   # include slh-misc-8m
   DEPENDS:= \
 	+slh-misc-8m
+
+  # Luci (SSL from OpenSSL)
+  DEPENDS+= \
+	+luci-ssl-openssl
 
   # Debugging options
   DEPENDS+= \
