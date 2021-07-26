@@ -59,10 +59,6 @@ define Package/slh-misc-8m
   DEPENDS+= \
 	+luci-app-nlbwmon
 
-  # SSL certificates
-  DEPENDS+= \
-	+ca-certificates
-
   # Dynamic DNS support
   DEPENDS+= \
 	+luci-app-ddns \
@@ -102,6 +98,10 @@ define Package/slh-misc-16m
   # Luci (SSL from OpenSSL)
   DEPENDS+= \
 	+luci-ssl-openssl
+
+  # SSL certificates
+  DEPENDS+= \
+	+ca-certificates
 
   # Debugging options
   DEPENDS+= \
