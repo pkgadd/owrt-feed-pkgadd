@@ -117,9 +117,11 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+htop
 
-  # ip-full
+  # DSA helpers
   DEPENDS+= \
-	+ip-full
+	+ip-bridge \
+	+ip-full \
+	+tc-full
 
   # umdns
   DEPENDS+= \
