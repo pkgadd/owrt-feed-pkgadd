@@ -28,8 +28,8 @@ define Package/slh-misc-8m
 
   # Luci (SSL, default SSL provider)
   DEPENDS+= \
-	+luci-app-uhttpd \
-	+luci-theme-openwrt-2020
+	+luci \
+	+luci-app-uhttpd
 
   # Adblock package with Luci support, initially disabled
   DEPENDS+= \
@@ -98,6 +98,8 @@ define Package/slh-misc-16m
   # Luci (SSL from OpenSSL)
   DEPENDS+= \
 	+luci-ssl-openssl
+	+luci-theme-openwrt-bootstrap \
+	+luci-theme-openwrt-2020
 
   # SSL certificates
   DEPENDS+= \
