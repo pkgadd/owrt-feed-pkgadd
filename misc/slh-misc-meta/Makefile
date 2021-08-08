@@ -26,6 +26,10 @@ define Package/slh-misc-8m
   DEPENDS:= \
 	+6in4
 
+  # DSA debugging
+  DEPENDS+= \
+	+netifd-netinfo
+
   # Luci (SSL, default SSL provider)
   DEPENDS+= \
 	+luci \
