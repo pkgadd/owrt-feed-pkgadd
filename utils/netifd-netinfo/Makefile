@@ -20,7 +20,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/netifd-netinfo
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:=netifd jshn
+  DEPENDS:=netifd +jshn
   TITLE:=Show status information for DSA bridges
   PKGARCH:=all
 endef
