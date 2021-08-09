@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2021-07-26
+PKG_SOURCE_DATE:=2021-08-08
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -169,6 +169,10 @@ define Package/slh-misc-32m
   # diffutils
   DEPENDS+= \
 	+diffutils
+
+  # ethtool
+  DEPENDS+= \
+	+ethtool-full
 
   # exfat-utils
   DEPENDS+= \
