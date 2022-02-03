@@ -158,10 +158,6 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+tcpdump-mini
 
-  # banip
-  DEPENDS+= \
-	+luci-app-banip
-
   # diffutils
   DEPENDS+= \
 	+diffutils
@@ -256,8 +252,6 @@ define Package/roen-misc-meta
   DEPENDS+= \
 	+luci-i18n-adblock-de \
 	+luci-i18n-adblock-en \
-	+luci-i18n-banip-de \
-	+luci-i18n-banip-en \
 	+luci-i18n-base-de \
 	+luci-i18n-base-en \
 	+luci-i18n-ddns-de \
