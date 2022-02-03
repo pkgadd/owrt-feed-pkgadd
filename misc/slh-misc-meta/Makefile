@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2021-08-08
+PKG_SOURCE_DATE:=2022-02-03
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -38,10 +38,6 @@ define Package/slh-misc-8m
   # Adblock package with Luci support, initially disabled
   DEPENDS+= \
 	+luci-app-adblock
-
-  # Support for IETF BCP38
-  DEPENDS+= \
-	+luci-app-bcp38
 
   # USB device mount & filesystem support
   DEPENDS+= \
@@ -264,8 +260,6 @@ define Package/roen-misc-meta
 	+luci-i18n-banip-en \
 	+luci-i18n-base-de \
 	+luci-i18n-base-en \
-	+luci-i18n-bcp38-de \
-	+luci-i18n-bcp38-en \
 	+luci-i18n-ddns-de \
 	+luci-i18n-ddns-en \
 	+luci-i18n-firewall-de \
