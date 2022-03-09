@@ -120,8 +120,7 @@ define Package/slh-misc-16m
   # DSA helpers
   DEPENDS+= \
 	+ip-bridge \
-	+ip-full \
-	+tc-full
+	+ip-full
 
   # umdns
   DEPENDS+= \
