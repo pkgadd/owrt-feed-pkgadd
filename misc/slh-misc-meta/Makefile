@@ -196,15 +196,6 @@ define Package/slh-misc-luci-statistics
 	+collectd-mod-uptime \
 	+collectd-mod-wireless
 
-  # only install on higher-end targets
-  DEPENDS+= \
-	+TARGET_x86:collectd-mod-sqm \
-	+TARGET_x86_64:collectd-mod-sqm \
-	+TARGET_mvebu:collectd-mod-sqm \
-	+TARGET_ipq40xx:collectd-mod-sqm \
-	+TARGET_ipq806x:collectd-mod-sqm \
-	+TARGET_ipq807x:collectd-mod-sqm
-
   # only available on selected targets
   DEPENDS+= \
 	+TARGET_x86:collectd-mod-cpufreq \
@@ -230,6 +221,15 @@ define Package/slh-misc-qos
   DEPENDS:= \
 	+luci-app-sqm \
 	+sqm-scripts-extra
+
+  # only install on higher-end targets
+  DEPENDS+= \
+	+TARGET_x86:collectd-mod-sqm \
+	+TARGET_x86_64:collectd-mod-sqm \
+	+TARGET_mvebu:collectd-mod-sqm \
+	+TARGET_ipq40xx:collectd-mod-sqm \
+	+TARGET_ipq806x:collectd-mod-sqm \
+	+TARGET_ipq807x:collectd-mod-sqm
 endef
 
 define Package/slh-misc-qos/description
