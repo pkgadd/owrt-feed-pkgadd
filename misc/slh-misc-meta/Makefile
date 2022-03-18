@@ -242,10 +242,6 @@ define Package/roen-misc-meta
   TITLE:=meta package installing RoEns default packages
   PKGARCH:=all
 
-  # pull in luci-statistics
-  DEPENDS:= \
-  	+slh-misc-luci-statistics
-
   # wifischedule support for Luci
   DEPENDS+= \
 	+luci-app-wifischedule
