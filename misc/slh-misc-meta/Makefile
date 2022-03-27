@@ -242,10 +242,6 @@ define Package/roen-misc-meta
   TITLE:=meta package installing RoEns default packages
   PKGARCH:=all
 
-  # wifischedule support for Luci
-  DEPENDS+= \
-	+luci-app-wifischedule
-
   # USB tethering support
   DEPENDS+= \
 	+kmod-usb-net \
@@ -262,22 +258,16 @@ define Package/roen-misc-meta
 	+luci-i18n-ddns-en \
 	+luci-i18n-firewall-de \
 	+luci-i18n-firewall-en \
-	+luci-i18n-mwan3-de \
-	+luci-i18n-mwan3-en \
 	+luci-i18n-nlbwmon-de \
 	+luci-i18n-nlbwmon-en \
 	+luci-i18n-opkg-de \
 	+luci-i18n-opkg-en \
 	+luci-i18n-p910nd-de \
 	+luci-i18n-p910nd-en \
-	+luci-i18n-sqm-de \
-	+luci-i18n-sqm-en \
 	+luci-i18n-statistics-de \
 	+luci-i18n-statistics-en \
 	+luci-i18n-uhttpd-de \
 	+luci-i18n-uhttpd-en \
-	+luci-i18n-wifischedule-de \
-	+luci-i18n-wifischedule-en \
 	+luci-i18n-wireguard-de \
 	+luci-i18n-wireguard-en \
 	+luci-i18n-wol-de \
