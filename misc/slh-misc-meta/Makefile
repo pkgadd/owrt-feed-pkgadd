@@ -246,10 +246,6 @@ define Package/roen-misc-meta
   TITLE:=meta package installing RoEns default packages
   PKGARCH:=all
 
-  # USB tethering support
-  DEPENDS+= \
-	+kmod-usb-net-rndis
-
   # i18n-de support for Luci
   DEPENDS+= \
 	+luci-i18n-adblock-de \
