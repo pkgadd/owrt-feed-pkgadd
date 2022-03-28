@@ -173,6 +173,10 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+ntfs-3g \
 	+ntfs-3g-utils
+
+  # USB tethering support
+  DEPENDS+= \
+	+kmod-usb-net-rndis
 endef
 
 define Package/slh-misc-32m/description
@@ -244,8 +248,6 @@ define Package/roen-misc-meta
 
   # USB tethering support
   DEPENDS+= \
-	+kmod-usb-net \
-	+kmod-usb-net-cdc-ether \
 	+kmod-usb-net-rndis
 
   # i18n-de support for Luci
