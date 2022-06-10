@@ -1,14 +1,17 @@
 --- a/infobash
 +++ b/infobash
-@@ -62,7 +62,7 @@ IRCCL=" $IRCCL    \x0312   \x0302   \x0313   \x0306   \x0311   \x0310   \x0300
+@@ -62,9 +62,9 @@ IRCCL=" $IRCCL    \x0312   \x0302   \x0313   \x0306   \x0311   \x0310   \x0300
  COLORS=(DGREY BLACK RED DRED GREEN DGREEN YELLOW DYELLOW BLUE DBLUE MAGENTA DMAGENTA CYAN DCYAN WHITE GREY NORMAL)
  # See above for notes on EMPTY
  SCHEMES=(EMPTY,EMPTY,EMPTY NORMAL,NORMAL,NORMAL BLUE,NORMAL,NORMAL GREEN,YELLOW,NORMAL DYELLOW,NORMAL,NORMAL CYAN,BLUE,NORMAL RED,NORMAL,NORMAL GREEN,NORMAL,NORMAL YELLOW,NORMAL,NORMAL GREEN,DGREEN,NORMAL BLUE,RED,NORMAL BLUE,NORMAL,RED YELLOW,WHITE,GREEN BLUE,NORMAL,GREEN DCYAN,NORMAL,DMAGENTA)
 -DEFSCHEME=2	# Defaults to 2, make this 1 for normal, 0 for no colorcodes at all. Set to any other valid scheme you like. Same as runtime parameter.
 +DEFSCHEME=0	# Defaults to 2, make this 1 for normal, 0 for no colorcodes at all. Set to any other valid scheme you like. Same as runtime parameter.
  SHOWHOST=1	# Set this to 0 to avoid printing the hostname 
- SHOWIRC=2	# SHOWIRC=1 to avoid showing the irc client version number, or SHOWIRC=0 to disable client information completely.
+-SHOWIRC=2	# SHOWIRC=1 to avoid showing the irc client version number, or SHOWIRC=0 to disable client information completely.
++SHOWIRC=0	# SHOWIRC=1 to avoid showing the irc client version number, or SHOWIRC=0 to disable client information completely.
  INDENT=14	# Default indentation level
+ VBL=0		# Verbosity level defaults to 0, this can also be set with -v, -v2, -v3, etc as a parameter.
+ IBSHELL=0	# Running in a shell? Defaults to false, and is determined later.
 @@ -72,7 +72,7 @@ NOCPUCOUNT=0	# Wether or not the string "dual" or similar is found in cpuinfo ou
  # In cases of derived distros where the version file of the base distro can also be found under /etc, the derived distro's
  # version file should go first. (Such as with Sabayon / Gentoo)
