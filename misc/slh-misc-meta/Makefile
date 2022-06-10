@@ -190,12 +190,12 @@ define Package/slh-misc-luci-statistics
   PKGARCH:=all
 
   # infobash (x86/ x86_64)
-  DEPENDS+= \
+  DEPENDS:= \
 	+TARGET_x86:infobash \
 	+TARGET_x86_64:infobash
 
   # Luci statistics
-  DEPENDS:= \
+  DEPENDS+= \
 	+luci-app-statistics \
 	+collectd-mod-conntrack \
 	+collectd-mod-entropy \

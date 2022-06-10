@@ -15,7 +15,7 @@ PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/fullstory/infobash
 PKG_SOURCE_VERSION:=cc5237ae5db5209e58b06c6095a869f311b8a058
-PKG_MIRROR_HASH:=skip
+PKG_MIRROR_HASH:=b24daa5cbe5bbc387dc86d812a3428cf4813950a2700b276f0ec95370d3955fe
 
 PKG_LICENSE:=GPL-2.0-or-later
 PKG_LICENSE_FILES:=debian/copyright
