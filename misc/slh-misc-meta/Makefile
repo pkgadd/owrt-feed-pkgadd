@@ -171,12 +171,12 @@ define Package/slh-misc-32m
 
   # ntfs-3g
   DEPENDS+= \
-	+TARGET_x86:kmod-ntfs3 \
-	+TARGET_x86_64:kmod-ntfs3 \
-	+TARGET_ipq40xx:kmod-ntfs3 \
-	+TARGET_ipq806x:kmod-ntfs3 \
-	+TARGET_ipq807x:kmod-ntfs3 \
-	+TARGET_ath79:kmod-ntfs3
+	+TARGET_x86:kmod-fs-ntfs3 \
+	+TARGET_x86_64:kmod-fs-ntfs3 \
+	+TARGET_ipq40xx:kmod-fs-ntfs3 \
+	+TARGET_ipq806x:kmod-fs-ntfs3 \
+	+TARGET_ipq807x:kmod-fs-ntfs3 \
+	+TARGET_ath79:kmod-fs-ntfs3
 	#lantiq
 	#realtek
 
