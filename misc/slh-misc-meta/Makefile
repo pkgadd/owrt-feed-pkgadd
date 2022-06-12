@@ -171,8 +171,14 @@ define Package/slh-misc-32m
 
   # ntfs-3g
   DEPENDS+= \
-	+ntfs-3g \
-	+ntfs-3g-utils
+	+TARGET_x86:kmod-ntfs3 \
+	+TARGET_x86_64:kmod-ntfs3 \
+	+TARGET_ipq40xx:kmod-ntfs3 \
+	+TARGET_ipq806x:kmod-ntfs3 \
+	+TARGET_ipq807x:kmod-ntfs3 \
+	+TARGET_ath79:kmod-ntfs3
+	#lantiq
+	#realtek
 
   # USB tethering support
   DEPENDS+= \
