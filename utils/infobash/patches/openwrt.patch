@@ -1,6 +1,6 @@
 --- a/infobash
 +++ b/infobash
-@@ -62,9 +62,9 @@ IRCCL=" $IRCCL    \x0312   \x0302   \x0313   \x0306   \x0311   \x0310   \x0300
+@@ -62,17 +62,17 @@ IRCCL=" $IRCCL    \x0312   \x0302   \x03
  COLORS=(DGREY BLACK RED DRED GREEN DGREEN YELLOW DYELLOW BLUE DBLUE MAGENTA DMAGENTA CYAN DCYAN WHITE GREY NORMAL)
  # See above for notes on EMPTY
  SCHEMES=(EMPTY,EMPTY,EMPTY NORMAL,NORMAL,NORMAL BLUE,NORMAL,NORMAL GREEN,YELLOW,NORMAL DYELLOW,NORMAL,NORMAL CYAN,BLUE,NORMAL RED,NORMAL,NORMAL GREEN,NORMAL,NORMAL YELLOW,NORMAL,NORMAL GREEN,DGREEN,NORMAL BLUE,RED,NORMAL BLUE,NORMAL,RED YELLOW,WHITE,GREEN BLUE,NORMAL,GREEN DCYAN,NORMAL,DMAGENTA)
@@ -10,9 +10,10 @@
 -SHOWIRC=2	# SHOWIRC=1 to avoid showing the irc client version number, or SHOWIRC=0 to disable client information completely.
 +SHOWIRC=0	# SHOWIRC=1 to avoid showing the irc client version number, or SHOWIRC=0 to disable client information completely.
  INDENT=14	# Default indentation level
- VBL=0		# Verbosity level defaults to 0, this can also be set with -v, -v2, -v3, etc as a parameter.
+-VBL=0		# Verbosity level defaults to 0, this can also be set with -v, -v2, -v3, etc as a parameter.
++VBL=0		# Verbosity level defaults to 0, this can also be set with -v, -v2, -v3, -v4, etc as a parameter.
  IBSHELL=0	# Running in a shell? Defaults to false, and is determined later.
-@@ -72,7 +72,7 @@ NOCPUCOUNT=0	# Wether or not the string "dual" or similar is found in cpuinfo ou
+ NOCPUCOUNT=0	# Wether or not the string "dual" or similar is found in cpuinfo output. If so, avoid dups.
  # In cases of derived distros where the version file of the base distro can also be found under /etc, the derived distro's
  # version file should go first. (Such as with Sabayon / Gentoo)
  DIST_DERIV="aptosid-version sidux-version kanotix-version knoppix-version sabayon-release redhat-release turbolinux-release zenwalk-version"
@@ -30,6 +31,15 @@
  		type -p $I >/dev/null || error 5 "$I"
  	done
  }
+@@ -336,7 +336,7 @@ getparams () {
+ 					VBL="$1" 
+ 				fi
+ 			fi
+-			grep -q '^[1-3]$' <<< "$VBL" || error 4 "$VBL"
++			grep -q '^[1-4]$' <<< "$VBL" || error 4 "$VBL"
+ 		;;
+ 		--version)
+ 			say "InfoBash, the universal, portable, system info script for irc."
 @@ -411,7 +411,7 @@ getparams "$@"
  # If no colorscheme was set in the parameter handling routine, then set the default scheme
  ((CSCHEME)) || cscheme "$DEFSCHEME"
@@ -58,3 +68,15 @@
  UPT=$(uptime | gawk '{ a = gensub(/^.*up *([^,]*).*$/,"\\1","g",$0); gsub(/ /,"",a); print a }')
  
  IFS=$'\n'; GFX=($(gawk -F': ' '/VGA compatible controller/ { print $NF }' <<< "$LSPCI")); IFS="$OIFS"
+@@ -739,6 +742,11 @@ if ((VBL)); then  # (IF VBL > 1)
+ 	LNINTRO="$LNINTRO$(echo -ne "${C2}$OSKERN $FIRMWARE${CN}[ ${C1}$DISTRO ${CN}]")"
+ 	say "$LNINTRO"
+ 
++	if [[ $VBL -ge 4 ]]; then
++		LNSYSTEM=$(printf "${C1}%-${INDENT}s${C2} %s" "System" "$(cat /tmp/sysinfo/model)")
++		say "$LNSYSTEM"
++	fi # (IF VBL >= 4)
++
+ 	##say "CPU[0]=\"${CPU[0]}\""
+ 	IFS=","; CPUTMP=(${CPU[0]}); IFS="$OIFS" 
+ 	# Strange (and also some expected) behavior encountered.
