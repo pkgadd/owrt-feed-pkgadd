@@ -26,7 +26,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/infobash
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:=+bash +gawk
+  DEPENDS:=+bash +gawk +pciutils
   TITLE:=System info script
   PKGARCH:=all
 endef
