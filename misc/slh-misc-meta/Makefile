@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2022-02-03
+PKG_SOURCE_DATE:=2022-11-16
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
