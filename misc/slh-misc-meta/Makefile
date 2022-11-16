@@ -39,6 +39,10 @@ define Package/slh-misc-8m
   DEPENDS+= \
 	+luci-app-adblock
 
+  # Support for IETF BCP38
+  DEPENDS+= \
+	+luci-app-bcp38
+
   # USB device mount & filesystem support
   DEPENDS+= \
 	+blockd \
@@ -256,6 +260,7 @@ define Package/roen-misc-meta
   DEPENDS+= \
 	+luci-i18n-adblock-de \
 	+luci-i18n-base-de \
+	+luci-i18n-bcp38-de \
 	+luci-i18n-ddns-de \
 	+luci-i18n-firewall-de \
 	+luci-i18n-nlbwmon-de \
