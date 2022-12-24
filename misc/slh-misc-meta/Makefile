@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2022-11-16
+PKG_SOURCE_DATE:=2022-12-24
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -268,7 +268,6 @@ define Package/roen-misc-meta
 	+luci-i18n-p910nd-de \
 	+luci-i18n-statistics-de \
 	+luci-i18n-uhttpd-de \
-	+luci-i18n-wireguard-de \
 	+luci-i18n-wol-de
 endef
 
