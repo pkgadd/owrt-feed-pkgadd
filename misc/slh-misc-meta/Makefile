@@ -74,7 +74,7 @@ define Package/slh-misc-8m
 
   # wireguard (needs qrencode)
   DEPENDS+= \
-	+luci-app-wireguard
+	+luci-proto-wireguard
 
   # WLAN support
   DEPENDS+= \
