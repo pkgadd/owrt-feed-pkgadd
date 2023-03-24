@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2022-12-24
+PKG_SOURCE_DATE:=2023-03-24
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -161,6 +161,10 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+tcpdump-mini
 
+  # banip
+  DEPENDS+= \
+	+luci-app-banip
+
   # diffutils
   DEPENDS+= \
 	+diffutils
@@ -259,6 +263,7 @@ define Package/roen-misc-meta
   # i18n-de support for Luci
   DEPENDS+= \
 	+luci-i18n-adblock-de \
+	+luci-i18n-banip-de \
 	+luci-i18n-base-de \
 	+luci-i18n-bcp38-de \
 	+luci-i18n-ddns-de \
