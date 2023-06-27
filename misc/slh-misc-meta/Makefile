@@ -183,7 +183,7 @@ define Package/slh-misc-32m
 	+TARGET_x86_64:kmod-fs-ntfs3 \
 	+TARGET_ipq40xx:kmod-fs-ntfs3 \
 	+TARGET_ipq806x:kmod-fs-ntfs3 \
-	+TARGET_ipq807x:kmod-fs-ntfs3 \
+	+TARGET_qualcommax:kmod-fs-ntfs3 \
 	+TARGET_ath79:kmod-fs-ntfs3
 	#lantiq
 	#realtek
@@ -221,7 +221,7 @@ define Package/slh-misc-luci-statistics
 	+TARGET_mvebu:collectd-mod-cpufreq \
 	+TARGET_ipq40xx:collectd-mod-cpufreq \
 	+TARGET_ipq806x:collectd-mod-cpufreq \
-	+TARGET_ipq807x:collectd-mod-cpufreq \
+	+TARGET_qualcommax:collectd-mod-cpufreq \
 	+TARGET_armvirt:collectd-mod-cpufreq
 
   # only install on higher-end targets
@@ -231,7 +231,7 @@ define Package/slh-misc-luci-statistics
 	+TARGET_mvebu:collectd-mod-sqm \
 	+TARGET_ipq40xx:collectd-mod-sqm \
 	+TARGET_ipq806x:collectd-mod-sqm \
-	+TARGET_ipq807x:collectd-mod-sqm
+	+TARGET_qualcommax:collectd-mod-sqm
 endef
 
 define Package/slh-misc-luci-statistics/description
