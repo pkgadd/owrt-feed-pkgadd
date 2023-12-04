@@ -7,8 +7,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2023-03-24
-PKG_RELEASE:=$(AUTORELEASE)
+PKG_SOURCE_DATE:=2023-12-04
+PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_LICENSE:=ISC
@@ -78,7 +78,8 @@ define Package/slh-misc-8m
 
   # WLAN support
   DEPENDS+= \
-	+hostapd-utils
+	+hostapd-utils \
+	+wifi-suite
 
   # opkg
   DEPENDS+= \
