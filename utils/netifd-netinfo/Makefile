@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/version.mk
 
 PKG_NAME:=netifd-netinfo
 PKG_SOURCE_DATE:=2021-08-08
-PKG_RELEASE:=$(AUTORELEASE)
+PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_LICENSE:=GPL-2.0

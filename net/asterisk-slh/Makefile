@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=asterisk-slh
 PKG_SOURCE_DATE:=2019-05-06
-PKG_RELEASE:=$(AUTORELEASE)
+PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_LICENSE:=ISC
