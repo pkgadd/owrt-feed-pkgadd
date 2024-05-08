@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-05-10
+PKG_SOURCE_DATE:=2024-05-11
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -191,8 +191,7 @@ define Package/slh-misc-32m
 
   # sftp support
   DEPENDS+= \
-	+openssh-sftp-server \
-	+openssh-sftp-avahi-service
+	+openssh-sftp-server
 
   # USB tethering support
   DEPENDS+= \
