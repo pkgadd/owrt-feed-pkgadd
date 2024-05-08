@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2023-12-04
+PKG_SOURCE_DATE:=2024-05-09
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -188,6 +188,10 @@ define Package/slh-misc-32m
 	+TARGET_ath79:kmod-fs-ntfs3
 	#lantiq
 	#realtek
+
+  # sftp support
+  DEPENDS+= \
+	openssh-sftp-server
 
   # USB tethering support
   DEPENDS+= \
