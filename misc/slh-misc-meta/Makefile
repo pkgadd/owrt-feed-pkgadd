@@ -252,7 +252,7 @@ define Package/slh-misc-qos
   # SQM
   DEPENDS:= \
 	+luci-app-sqm \
-	+sqm-scripts-extra
+	+sqm-scripts
 endef
 
 define Package/slh-misc-qos/description
