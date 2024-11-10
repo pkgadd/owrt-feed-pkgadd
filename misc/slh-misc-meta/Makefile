@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# Copyright (C) 2019-2024 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 #
 # This is free software, licensed under the ISC License.
 #
@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-06-23
+PKG_SOURCE_DATE:=2024-11-10
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -80,10 +80,6 @@ define Package/slh-misc-8m
   DEPENDS+= \
 	+hostapd-utils \
 	+wifi-suite
-
-  # opkg
-  DEPENDS+= \
-	+opkg
 endef
 
 define Package/slh-misc-8m/description
@@ -274,7 +270,6 @@ define Package/roen-misc-meta
 	+luci-i18n-ddns-de \
 	+luci-i18n-firewall-de \
 	+luci-i18n-nlbwmon-de \
-	+luci-i18n-opkg-de \
 	+luci-i18n-p910nd-de \
 	+luci-i18n-statistics-de \
 	+luci-i18n-uhttpd-de \
