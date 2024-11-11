@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-11-10
+PKG_SOURCE_DATE:=2024-11-11
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -105,6 +105,10 @@ define Package/slh-misc-16m
   # SSL certificates
   DEPENDS+= \
 	+ca-certificates
+
+  # apk-openssl
+  DEPENDS+= \
+	+apk-openssl
 
   # Debugging options
   DEPENDS+= \
@@ -271,6 +275,7 @@ define Package/roen-misc-meta
 	+luci-i18n-firewall-de \
 	+luci-i18n-nlbwmon-de \
 	+luci-i18n-p910nd-de \
+	+luci-i18n-package-manager-de \
 	+luci-i18n-statistics-de \
 	+luci-i18n-uhttpd-de \
 	+luci-i18n-wol-de
