@@ -22,10 +22,6 @@ define Package/slh-misc-8m
   TITLE:=meta package installing default package set for 8 MB flash devices.
   PKGARCH:=all
 
-  # IPv6 support
-  DEPENDS:= \
-	+6in4
-
   # DSA debugging
   DEPENDS+= \
 	+netifd-netinfo
@@ -113,6 +109,10 @@ define Package/slh-misc-16m
   # htop
   DEPENDS+= \
 	+htop
+
+  # IPv6 support
+  DEPENDS:= \
+	+6in4
 
   # DSA helpers
   DEPENDS+= \
