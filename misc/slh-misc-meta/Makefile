@@ -54,11 +54,6 @@ define Package/slh-misc-8m
 	+luci-app-p910nd \
 	+kmod-usb-printer
 
-  # Dynamic DNS support
-  DEPENDS+= \
-	+luci-app-ddns \
-	+ddns-scripts-noip
-
   # wireguard (needs qrencode)
   DEPENDS+= \
 	+luci-proto-wireguard
@@ -96,6 +91,11 @@ define Package/slh-misc-16m
   # apk-openssl
   DEPENDS+= \
 	+apk-openssl
+
+  # Dynamic DNS support
+  DEPENDS+= \
+	+luci-app-ddns \
+	+ddns-scripts-noip
 
   # Debugging options
   DEPENDS+= \
