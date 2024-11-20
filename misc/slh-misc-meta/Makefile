@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-11-11
+PKG_SOURCE_DATE:=2024-11-20
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -68,10 +68,6 @@ define Package/slh-misc-8m
 	+luci-app-ddns \
 	+ddns-scripts-noip
 
-  # tftp-hpa
-  DEPENDS+= \
-	+tftpd-hpa
-
   # wireguard (needs qrencode)
   DEPENDS+= \
 	+luci-proto-wireguard
@@ -126,6 +122,10 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+ip-bridge \
 	+ip-full
+
+  # tftp-hpa
+  DEPENDS+= \
+	+tftpd-hpa
 
   # umdns
   DEPENDS+= \
