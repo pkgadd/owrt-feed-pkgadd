@@ -59,10 +59,6 @@ define Package/slh-misc-8m
 	+luci-app-p910nd \
 	+kmod-usb-printer
 
-  # bandwidth monitoring support for Luci
-  DEPENDS+= \
-	+luci-app-nlbwmon
-
   # Dynamic DNS support
   DEPENDS+= \
 	+luci-app-ddns \
@@ -122,6 +118,10 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+ip-bridge \
 	+ip-full
+
+  # bandwidth monitoring support for Luci
+  DEPENDS+= \
+	+luci-app-nlbwmon
 
   # tftp-hpa
   DEPENDS+= \
