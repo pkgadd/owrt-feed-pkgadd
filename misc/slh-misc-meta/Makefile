@@ -45,7 +45,6 @@ define Package/slh-misc-8m
 	+eject \
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
-	+kmod-fs-exfat \
 	+kmod-fs-ext4 \
 	+kmod-nls-utf8 \
 	+kmod-usb2
@@ -104,6 +103,7 @@ define Package/slh-misc-16m
 
   # exfat-utils
   DEPENDS+= \
+	+kmod-fs-exfat \
 	+exfat-fsck
 
   # htop
