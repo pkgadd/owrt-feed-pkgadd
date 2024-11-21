@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-11-20
+PKG_SOURCE_DATE:=2024-11-21
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -34,6 +34,11 @@ define Package/slh-misc-8m
   # Support for IETF BCP38
   DEPENDS+= \
 	+luci-app-bcp38
+
+  # Dynamic DNS support
+  DEPENDS+= \
+	+luci-app-ddns \
+	+ddns-scripts-noip
 
   # USB device mount & filesystem support
   DEPENDS+= \
@@ -91,11 +96,6 @@ define Package/slh-misc-16m
   # apk-openssl
   DEPENDS+= \
 	+apk-openssl
-
-  # Dynamic DNS support
-  DEPENDS+= \
-	+luci-app-ddns \
-	+ddns-scripts-noip
 
   # Debugging options
   DEPENDS+= \
