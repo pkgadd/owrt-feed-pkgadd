@@ -23,7 +23,7 @@ define Package/slh-misc-8m
   PKGARCH:=all
 
   # DSA debugging
-  DEPENDS+= \
+  DEPENDS:= \
 	+netifd-netinfo
 
   # Luci (SSL, default SSL provider)
@@ -111,7 +111,7 @@ define Package/slh-misc-16m
 	+htop
 
   # IPv6 support
-  DEPENDS:= \
+  DEPENDS+= \
 	+6in4
 
   # DSA helpers
