@@ -45,15 +45,15 @@ define Package/slh-misc-8m
 	+kmod-nls-utf8 \
 	+kmod-usb2
 
-  # Dynamic DNS support
-  DEPENDS+= \
-	+luci-app-ddns \
-	+ddns-scripts-noip
-
   # p910nd support for USB printers
   DEPENDS+= \
 	+luci-app-p910nd \
 	+kmod-usb-printer
+
+  # Dynamic DNS support
+  DEPENDS+= \
+	+luci-app-ddns \
+	+ddns-scripts-noip
 
   # wireguard (needs qrencode)
   DEPENDS+= \
