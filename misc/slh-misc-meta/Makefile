@@ -31,10 +31,6 @@ define Package/slh-misc-8m
 	+luci \
 	+luci-app-uhttpd
 
-  # Adblock package with Luci support, initially disabled
-  DEPENDS+= \
-	+luci-app-adblock
-
   # Support for IETF BCP38
   DEPENDS+= \
 	+luci-app-bcp38
@@ -87,6 +83,10 @@ define Package/slh-misc-16m
   # SSL certificates
   DEPENDS+= \
 	+ca-certificates
+
+  # Adblock package with Luci support, initially disabled
+  DEPENDS+= \
+	+luci-app-adblock
 
   # apk-openssl
   DEPENDS+= \
