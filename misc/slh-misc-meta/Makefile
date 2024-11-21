@@ -34,7 +34,6 @@ define Package/slh-misc-8m
   # Support for IETF BCP38
   DEPENDS+= \
 	+luci-app-bcp38
-	+ddns-scripts-noip
 
   # USB device mount & filesystem support
   DEPENDS+= \
@@ -49,6 +48,7 @@ define Package/slh-misc-8m
   # Dynamic DNS support
   DEPENDS+= \
 	+luci-app-ddns \
+	+ddns-scripts-noip
 
   # p910nd support for USB printers
   DEPENDS+= \
