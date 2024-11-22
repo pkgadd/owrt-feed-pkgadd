@@ -58,11 +58,6 @@ define Package/slh-misc-8m
   # wireguard (needs qrencode)
   DEPENDS+= \
 	+luci-proto-wireguard
-
-  # WLAN support
-  DEPENDS+= \
-	+hostapd-utils \
-	+wifi-suite
 endef
 
 define Package/slh-misc-8m/description
@@ -137,6 +132,8 @@ define Package/slh-misc-16m
 
   # WLAN support
   DEPENDS+= \
+	+hostapd-utils \
+	+wifi-suite
 	+wpa-cli
 
   # WoL support for Luci
