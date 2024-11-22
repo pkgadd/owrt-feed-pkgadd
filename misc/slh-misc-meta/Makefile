@@ -133,7 +133,7 @@ define Package/slh-misc-16m
   # WLAN support
   DEPENDS+= \
 	+hostapd-utils \
-	+wifi-suite
+	+wifi-suite \
 	+wpa-cli
 
   # WoL support for Luci
