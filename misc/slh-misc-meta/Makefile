@@ -38,7 +38,6 @@ define Package/slh-misc-8m
   # USB device mount & filesystem support
   DEPENDS+= \
 	+blockd \
-	+eject \
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
 	+kmod-fs-ext4 \
@@ -98,6 +97,7 @@ define Package/slh-misc-16m
 
   # exfat-utils
   DEPENDS+= \
+	+eject \
 	+kmod-fs-exfat \
 	+exfat-fsck
 
