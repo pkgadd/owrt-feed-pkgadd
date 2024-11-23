@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-11-21
+PKG_SOURCE_DATE:=2024-11-22
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -209,7 +209,6 @@ define Package/slh-misc-luci-statistics
   DEPENDS:= \
 	+luci-app-statistics \
 	+collectd-mod-conntrack \
-	+collectd-mod-entropy \
 	+collectd-mod-ping \
 	+collectd-mod-snmp \
 	+collectd-mod-thermal \
