@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2024-11-22
+PKG_SOURCE_DATE:=2024-12-21
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -179,6 +179,7 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+TARGET_x86:kmod-fs-ntfs3 \
 	+TARGET_x86_64:kmod-fs-ntfs3 \
+	+TARGET_mediatek:kmod-fs-ntfs3 \
 	+TARGET_ipq40xx:kmod-fs-ntfs3 \
 	+TARGET_ipq806x:kmod-fs-ntfs3 \
 	+TARGET_qualcommax:kmod-fs-ntfs3 \
@@ -219,6 +220,7 @@ define Package/slh-misc-luci-statistics
   DEPENDS+= \
 	+TARGET_x86:collectd-mod-cpufreq \
 	+TARGET_x86_64:collectd-mod-cpufreq \
+	+TARGET_mediatek:collectd-mod-cpufreq \
 	+TARGET_mvebu:collectd-mod-cpufreq \
 	+TARGET_ipq40xx:collectd-mod-cpufreq \
 	+TARGET_ipq806x:collectd-mod-cpufreq \
@@ -229,6 +231,7 @@ define Package/slh-misc-luci-statistics
   DEPENDS+= \
 	+TARGET_x86:collectd-mod-sqm \
 	+TARGET_x86_64:collectd-mod-sqm \
+	+TARGET_mediatek:collectd-mod-sqm \
 	+TARGET_mvebu:collectd-mod-sqm \
 	+TARGET_ipq40xx:collectd-mod-sqm \
 	+TARGET_ipq806x:collectd-mod-sqm \
