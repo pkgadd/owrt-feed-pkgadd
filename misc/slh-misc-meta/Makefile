@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2025-03-27
+PKG_SOURCE_DATE:=2025-05-10
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -186,10 +186,6 @@ define Package/slh-misc-32m
 	+TARGET_ath79:kmod-fs-ntfs3
 	#lantiq
 	#realtek
-
-  # policy based routing
-  DEPENDS+= \
-	+luci-app-pbr
 
   # sftp support
   DEPENDS+= \
