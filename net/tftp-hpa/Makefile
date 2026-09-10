@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# Copyright (C) 2019-2026 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 #
 # This is free software, licensed under the ISC License.
 #
@@ -7,13 +7,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=tftp-hpa
-PKG_VERSION:=5.2
-PKG_RELEASE:=2
+PKG_VERSION:=6.1
+PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=@KERNEL/software/network/tftp
-PKG_HASH:=afee361df96a2f88344e191f6a25480fd714e1d28d176c3f10cc43fa206b718b
+PKG_HASH:=101d7b882610f11bb176150bc827942b5c0c4fd913eb1fa3605db5a4478ee543
 
 PKG_LICENSE:=BSD-4-Clause
 PKG_BUILD_PARALLEL:=1
@@ -37,9 +37,9 @@ define Package/tftpd-hpa
 endef
 
 CONFIGURE_ARGS += \
-	--without-tcpwrappers \
-	--without-remap \
-	--without-readline
+	--disable-readline
+
+#	--disable-remap is currently (v6.1) broken
 
 ifneq ($(CONFIG_IPV6),y)
 CONFIGURE_ARGS += \
