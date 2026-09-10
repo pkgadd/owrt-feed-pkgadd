@@ -8,11 +8,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=tftp-hpa
 PKG_VERSION:=5.2
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
-PKG_SOURCE_URL:=@KERNEL/software/network/tftp/$(PKG_NAME)
+PKG_SOURCE_URL:=@KERNEL/software/network/tftp
 PKG_HASH:=afee361df96a2f88344e191f6a25480fd714e1d28d176c3f10cc43fa206b718b
 
 PKG_LICENSE:=BSD-4-Clause
