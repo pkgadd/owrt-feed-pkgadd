@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2025-05-10
+PKG_SOURCE_DATE:=2026-10-01
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -175,17 +175,15 @@ define Package/slh-misc-32m
   DEPENDS+= \
 	+exfat-mkfs
 
-  # ntfs-3g
+  # ntfs
   DEPENDS+= \
-	+TARGET_x86:kmod-fs-ntfs3 \
-	+TARGET_x86_64:kmod-fs-ntfs3 \
-	+TARGET_mediatek:kmod-fs-ntfs3 \
-	+TARGET_ipq40xx:kmod-fs-ntfs3 \
-	+TARGET_ipq806x:kmod-fs-ntfs3 \
-	+TARGET_qualcommax:kmod-fs-ntfs3 \
-	+TARGET_ath79:kmod-fs-ntfs3
-	#lantiq
-	#realtek
+	+TARGET_x86:kmod-fs-ntfs \
+	+TARGET_x86_64:kmod-fs-ntfs \
+	+TARGET_mediatek:kmod-fs-ntfs \
+	+TARGET_ipq40xx:kmod-fs-ntfs \
+	+TARGET_ipq806x:kmod-fs-ntfs \
+	+TARGET_qualcommax:kmod-fs-ntfs \
+	+TARGET_ath79:kmod-fs-ntfs
 
   # sftp support
   DEPENDS+= \
