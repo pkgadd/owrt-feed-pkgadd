@@ -13,7 +13,7 @@ PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tgz
-PKG_SOURCE_URL:=https://sg.danny.cz/scsi/
+PKG_SOURCE_URL:=http://sg.danny.cz/scsi/
 PKG_HASH:=0a800e9e94dca2ab702d65d72777ae8cae078e3d74d0bcbed64ba0849e8029a1
 
 PKG_LICENSE:=GPL-2.0-or-later
