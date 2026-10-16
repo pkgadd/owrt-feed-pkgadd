@@ -47,6 +47,7 @@ define Package/slh-misc-8m
   # p910nd support for USB printers
   DEPENDS+= \
 	+luci-app-p910nd \
+	+printer-support \
 	+kmod-usb-printer
 
   # Dynamic DNS support
