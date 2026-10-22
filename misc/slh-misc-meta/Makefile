@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2026-10-02
+PKG_SOURCE_DATE:=2026-10-03
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -28,12 +28,11 @@ define Package/slh-misc-8m
 
   # Luci (SSL, default SSL provider)
   DEPENDS+= \
-	+luci \
-	+luci-app-uhttpd
-
-  # Support for IETF BCP38
-  DEPENDS+= \
-	+luci-app-bcp38
+	+luci-mod-admin-full \
+	+luci-theme-openwrt-2020 \
+	+luci-app-firewall \
+	+luci-proto-ipv6 \
+	+px5g-mbedtls
 
   # p910nd support for USB printers
   DEPENDS+= \
@@ -69,7 +68,9 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+luci-ssl-openssl \
 	+luci-theme-bootstrap \
-	+luci-theme-openwrt-2020
+	+luci-theme-openwrt-2020 \
+	+luci-app-uhttpd \
+	+luci-app-wol
 
   # SSL certificates
   DEPENDS+= \
@@ -78,6 +79,10 @@ define Package/slh-misc-16m
   # Adblock package with Luci support, initially disabled
   DEPENDS+= \
 	+luci-app-adblock
+
+  # Support for IETF BCP38
+  DEPENDS+= \
+	+luci-app-bcp38
 
   # USB device mount & filesystem support
   DEPENDS+= \
