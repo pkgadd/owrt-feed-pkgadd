@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2026-10-01
+PKG_SOURCE_DATE:=2026-10-02
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -34,15 +34,6 @@ define Package/slh-misc-8m
   # Support for IETF BCP38
   DEPENDS+= \
 	+luci-app-bcp38
-
-  # USB device mount & filesystem support
-  DEPENDS+= \
-	+blockd \
-	+kmod-usb-storage \
-	+kmod-usb-storage-uas \
-	+kmod-fs-ext4 \
-	+kmod-nls-utf8 \
-	+kmod-usb2
 
   # p910nd support for USB printers
   DEPENDS+= \
@@ -87,6 +78,15 @@ define Package/slh-misc-16m
   # Adblock package with Luci support, initially disabled
   DEPENDS+= \
 	+luci-app-adblock
+
+  # USB device mount & filesystem support
+  DEPENDS+= \
+	+blockd \
+	+kmod-usb-storage \
+	+kmod-usb-storage-uas \
+	+kmod-fs-ext4 \
+	+kmod-nls-utf8 \
+	+kmod-usb2
 
   # apk-openssl
   DEPENDS+= \
