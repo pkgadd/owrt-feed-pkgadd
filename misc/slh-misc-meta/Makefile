@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2026-10-04
+PKG_SOURCE_DATE:=2026-10-05
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -27,8 +27,7 @@ define Package/slh-misc-8m
 	+luci-mod-admin-full \
 	+luci-theme-openwrt-2020 \
 	+luci-app-firewall \
-	+luci-proto-ipv6 \
-	+px5g-mbedtls
+	+luci-proto-ipv6
 
   # p910nd support for USB printers
   DEPENDS+= \
