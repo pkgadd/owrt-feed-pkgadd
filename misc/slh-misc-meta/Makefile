@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2026-10-03
+PKG_SOURCE_DATE:=2026-10-04
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -21,10 +21,6 @@ define Package/slh-misc-8m
   CATEGORY:=misc
   TITLE:=meta package installing default package set for 8 MB flash devices.
   PKGARCH:=all
-
-  # DSA debugging
-  DEPENDS:= \
-	+netifd-netinfo
 
   # Luci (SSL, default SSL provider)
   DEPENDS+= \
@@ -63,6 +59,10 @@ define Package/slh-misc-16m
   # include slh-misc-8m
   DEPENDS:= \
 	+slh-misc-8m
+
+  # DSA debugging
+  DEPENDS+= \
+	+netifd-netinfo
 
   # Luci (SSL from OpenSSL)
   DEPENDS+= \
