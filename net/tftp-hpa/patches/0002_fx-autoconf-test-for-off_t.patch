@@ -1,0 +1,31 @@
+From 0659f23cbbf8a853a82cd4117795a519900fba41 Mon Sep 17 00:00:00 2001
+From: "H. Peter Anvin" <hpa@zytor.com>
+Date: Mon, 12 Oct 2026 13:56:54 -0700
+Subject: [PATCH] Fix autoconf test for off_t
+
+AC_TYPE_OFF_T *defines* off_t if it doesn't exist, so testing for a
+HAVE_OFF_T variable is plain wrong. It just happened to work on LP64
+systems...
+
+Reported-by: Chris Hofstaedtler <zeha@github.com>
+Fixes: https://github.com/hpax/tftp-hpa/issues/9
+Fixes: https://github.com/hpax/tftp-hpa/issues/10
+Signed-off-by: H. Peter Anvin <hpa@zytor.com>
+---
+ config.h | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+--- a/config.h
++++ b/config.h
+@@ -309,10 +309,7 @@ static inline void *mempcpy(void *dst, c
+ #define TYPE_MAX(t)	 TYPE_MKMASK(t, (t)1 << (sizeof(t)*CHAR_BIT-1-IS_SIGNED(t)))
+ #define TYPE_MIN(t)	 ((t)~TYPE_MAX(t))
+ 
+-/* off_t and OFF_T_MAX */
+-#ifndef HAVE_OFF_T
+-typedef long off_t;
+-#endif
++/* If OFF_T_MAX isn't defined */
+ #ifndef OFF_T_MAX
+ #define OFF_T_MAX TYPE_MAX(off_t)
+ #endif

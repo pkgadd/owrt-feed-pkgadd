@@ -1,0 +1,26 @@
+From f2d2b5d88ca3f329abe32f6366eae78a2ccb0ae7 Mon Sep 17 00:00:00 2001
+From: "H. Peter Anvin" <hpa@zytor.com>
+Date: Mon, 12 Oct 2026 14:01:57 -0700
+Subject: [PATCH] tftp: fix type of r_timeout
+
+r_timeout should be uintmax_t, not unsigned long. This would break
+compiling on 32-bit platforms.
+
+Reported-by: Chris Hofstaedtler <zeha@github.com>
+Fixes: https://github.com/hpax/tftp-hpa/issues/9
+Signed-off-by: H. Peter Anvin <hpa@zytor.com>
+---
+ tftp/tftp.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/tftp/tftp.c
++++ b/tftp/tftp.c
+@@ -280,7 +280,7 @@ int tftp_sendfile(int fd, const char *na
+     bool convert = !strcmp(mode, "netascii");
+     struct optreq optreq, optack;
+     uint16_t ap_opcode, ap_block;
+-    unsigned long r_timeout;
++    uintmax_t r_timeout;
+     volatile uintmax_t amount = 0;
+     struct stat st;
+ 

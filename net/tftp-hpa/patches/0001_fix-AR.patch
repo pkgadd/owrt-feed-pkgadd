@@ -8,8 +8,8 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 --- a/config/MCONFIG.in
 +++ b/config/MCONFIG.in
-@@ -66,5 +66,5 @@ LIBOBJS    = @LIBOBJS@
- TFTPDOBJS = @TFTPDOBJS@
+@@ -63,5 +63,5 @@ LIBS       = @LIBS@
+ LIBOBJS    = @LIBOBJS@
  
  # ar and ranlib (for making libraries)
 -AR	= @AR@ cq
@@ -26,7 +26,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	$(RANLIB) libxtra.a
 --- a/common/Makefile
 +++ b/common/Makefile
-@@ -17,7 +17,7 @@ all: $(LIB)
+@@ -18,7 +18,7 @@ all: $(LIB)
  
  $(LIB): $(OBJS)
  	-rm -f $(LIB)

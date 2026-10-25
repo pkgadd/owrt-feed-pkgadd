@@ -1,0 +1,23 @@
+From 088dfef0979e7e5364c586b60ea49c8fbd3a679d Mon Sep 17 00:00:00 2001
+From: Chris Hofstaedtler <zeha@debian.org>
+Date: Tue, 13 Oct 2026 13:14:11 +0200
+Subject: [PATCH] tftp: fix type of r_timeout
+
+Same as f2d2b5d88ca3f329abe32f6366eae78a2ccb0ae7 but in tftp_recv_file
+
+Signed-off-by: Chris Hofstaedtler <zeha@debian.org>
+---
+ tftp/tftp.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/tftp/tftp.c
++++ b/tftp/tftp.c
+@@ -448,7 +448,7 @@ int tftp_recvfile(int fd, const char *na
+     bool convert = !strcmp(mode, "netascii");
+     struct optreq optreq, optack;
+     uint16_t opcode;
+-    unsigned long r_timeout;
++    uintmax_t r_timeout;
+     volatile uintmax_t amount = 0;
+ 
+     optreq_init(&optreq);
