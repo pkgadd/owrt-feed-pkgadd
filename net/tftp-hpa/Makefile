@@ -34,6 +34,7 @@ endef
 define Package/tftpd-hpa
   $(call Package/tftp-hpa/Default)
   TITLE+= server
+  DEPENDS:=+libcap
 endef
 
 CONFIGURE_ARGS += \
