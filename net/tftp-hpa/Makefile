@@ -37,7 +37,8 @@ define Package/tftpd-hpa
 endef
 
 CONFIGURE_ARGS += \
-	--disable-readline
+	--disable-readline \
+	--disable-remap
 
 #	--disable-remap is currently (v6.1) broken
 
