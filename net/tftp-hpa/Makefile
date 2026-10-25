@@ -41,8 +41,6 @@ CONFIGURE_ARGS += \
 	--disable-readline \
 	--disable-remap
 
-#	--disable-remap is currently (v6.1) broken
-
 ifneq ($(CONFIG_IPV6),y)
 CONFIGURE_ARGS += \
 	--without-ipv6
