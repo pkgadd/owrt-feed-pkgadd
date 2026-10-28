@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2026-10-05
+PKG_SOURCE_DATE:=2026-10-28
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -89,6 +89,7 @@ define Package/slh-misc-16m
 	+kmod-usb-storage \
 	+kmod-usb-storage-uas \
 	+kmod-fs-ext4 \
+	+kmod-fs-vfat \
 	+kmod-nls-utf8 \
 	+kmod-usb2
 
