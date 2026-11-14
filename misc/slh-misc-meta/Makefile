@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=slh-misc-meta
-PKG_SOURCE_DATE:=2026-10-28
+PKG_SOURCE_DATE:=2026-11-14
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -25,7 +25,7 @@ define Package/slh-misc-8m
   # Luci (SSL, default SSL provider)
   DEPENDS+= \
 	+luci-mod-admin-full \
-	+luci-theme-openwrt-2020 \
+	+luci-theme-footstrap \
 	+luci-app-firewall \
 	+luci-proto-ipv6
 
@@ -67,7 +67,6 @@ define Package/slh-misc-16m
   DEPENDS+= \
 	+luci-ssl-openssl \
 	+luci-theme-bootstrap \
-	+luci-theme-openwrt-2020 \
 	+luci-app-uhttpd \
 	+luci-app-wol
 
